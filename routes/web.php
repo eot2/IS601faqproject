@@ -34,7 +34,7 @@ Route::get('/question/{question_id}/answer/create', 'AnswerController@create')->
 Route::get('/question/{question_id}/answer/{answer_id}', 'AnswerController@show')->name('answers.show');
 Route::get('/question/{question_id}/answer/{answer_id}/edit', 'AnswerController@edit')->name('answers.edit');
 Route::post('/question/{question_id}/answer/', 'AnswerController@store')->name('answers.store');
-Route::patch('/question/{question_id}/answer/{answer_id}', 'AnswerController@update')->name('answers.update');
+Route::patch('/question/{question_id}/answe --ser/{answer_id}', 'AnswerController@update')->name('answers.update');
 Route::delete('/question/{question_id}/answer/{answer_id}', 'AnswerController@destroy')->name('answers.destroy');
 
 Route::resources([
