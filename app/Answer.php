@@ -18,4 +18,14 @@ class Answer extends Model
     {
         return $this->belongsTo('App\Question');
     }
+
+    public function likes()
+    {
+        return $this->hasMany('App\Like');
+    }
+
+    public function dislikes()
+    {
+        return $this->hasMany('App\Dislike');
+    }
 }

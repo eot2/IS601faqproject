@@ -18,6 +18,25 @@
                             Edit Answer
                         </a>
                     </div>
+                    <div class="card-footer">
+                    Rate this answer:
+                        <div>
+                            <button class="btn btn-success float-left mr-2 " value="submit" type="submit" id="submit">Like
+                            </button>
+                            <button class="btn btn-warning float-left mr-2" value="submit" type="submit" id="submit">Dislike
+                            </button>
+
+                        </div>
+                                <div class="float-right">
+                                    Total Dislikes: {{ $answer->dislikes()->count() }}
+                                </div>
+                                <div class="float-right">
+                                     &nbsp &nbsp
+                                </div>
+                                <div class="float-right">
+                                    Total Likes: {{ $answer->likes()->count() }}
+                                </div>
+                    </div>
                 </div>
 
             </div>
