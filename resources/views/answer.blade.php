@@ -21,11 +21,12 @@
                     <div class="card-footer">
                     Rate this answer:
                         <div>
-                            <button class="btn btn-success float-left mr-2 " value="submit" type="submit" id="submit">Like
-                            </button>
-                            <button class="btn btn-warning float-left mr-2" value="submit" type="submit" id="submit">Dislike
-                            </button>
 
+                                {{csrf_field()}}
+                                <input class="btn btn-success float-left mr-2 " name = "like" value="Like" type="submit">
+                                </input>
+                                <input class="btn btn-warning float-left mr-2" name = "Dislike" value="Dislike" type="submit">
+                                </input>
                         </div>
                                 <div class="float-right">
                                     Total Dislikes: {{ $answer->dislikes()->count() }}
